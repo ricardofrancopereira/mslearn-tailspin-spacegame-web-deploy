@@ -26,6 +26,12 @@ stages:
       inputs:
         version: '$(dotnetSdkVersion)'
 
+    # 🔹 Força Node 16 (compatível com node-sass antigo)
+    - task: UseNode@1
+      displayName: 'Use Node.js 16.x'
+      inputs:
+        version: '16.x'
+
     - task: Npm@1
       displayName: 'Run npm install'
       inputs:
